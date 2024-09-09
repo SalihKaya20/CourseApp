@@ -1,0 +1,18 @@
+@model Ogretmen
+@{
+    ViewData["Title"] = "Öğretmen Silme";
+}
+
+<h2>Öğretmeni Sil</h2>
+<hr>    
+
+<div>
+    <p>
+        <b>@Model.OgretmenAdSoyad </b> isimli ürünü silmek istiyor musunuz ?
+        <form  asp-action="Delete" method="post">
+        <input type="hidden" name="id" value="@Model.OgretmenId">
+        <button type="submit" class="btn btn-danger">Evet</button>
+        <a asp-controller="Ogretmen" asp-action="Index" class="btn btn-primary">Hayır</a>
+        </form>
+    </p>
+</div>
